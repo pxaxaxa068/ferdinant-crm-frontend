@@ -848,7 +848,15 @@
             margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 8px
+            gap: 8px;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .modal-title span {
+            min-width: 0;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         .modal-title i {
@@ -1018,6 +1026,8 @@
             border-radius: var(--radius);
             box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
             animation: toastIn .3s cubic-bezier(.34,1.56,.64,1);
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .crm-toast .toast-icon {
@@ -1033,38 +1043,42 @@
 
         .crm-toast .toast-msg {
             flex: 1;
+            min-width: 0;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
         }
 
         .crm-toast.toast-success {
-            background: rgba(16, 185, 129, 0.14);
-            border: 1px solid rgba(16, 185, 129, 0.4);
+            background: rgba(16, 185, 129, 0.28);
+            border: 1px solid rgba(16, 185, 129, 0.5);
             color: var(--green);
         }
 
         .crm-toast.toast-success .toast-icon {
-            background: rgba(16, 185, 129, 0.18);
+            background: rgba(16, 185, 129, 0.32);
             color: var(--green);
         }
 
         .crm-toast.toast-error {
-            background: rgba(239, 68, 68, 0.14);
-            border: 1px solid rgba(239, 68, 68, 0.4);
+            background: rgba(239, 68, 68, 0.28);
+            border: 1px solid rgba(239, 68, 68, 0.5);
             color: var(--red);
         }
 
         .crm-toast.toast-error .toast-icon {
-            background: rgba(239, 68, 68, 0.18);
+            background: rgba(239, 68, 68, 0.32);
             color: var(--red);
         }
 
         .crm-toast.toast-info {
-            background: rgba(59, 130, 246, 0.14);
-            border: 1px solid rgba(59, 130, 246, 0.4);
+            background: rgba(59, 130, 246, 0.28);
+            border: 1px solid rgba(59, 130, 246, 0.5);
             color: var(--accent);
         }
 
         .crm-toast.toast-info .toast-icon {
-            background: rgba(59, 130, 246, 0.18);
+            background: rgba(59, 130, 246, 0.32);
             color: var(--accent);
         }
 
@@ -1292,12 +1306,14 @@
                 align-items: stretch;
                 padding: 0 10px;
                 gap: 8px;
+                box-sizing: border-box;
             }
 
             .crm-toast {
                 min-width: 0;
-                max-width: none;
+                max-width: 100%;
                 width: 100%;
+                box-sizing: border-box;
                 padding: 14px 16px;
                 font-size: 13.5px;
                 border-radius: 14px;
@@ -2075,7 +2091,7 @@
         <div class="modal-box" style="text-align:center">
             <div id="alert-modal-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px"></div>
             <div class="modal-title" id="alert-modal-title" style="justify-content:center"></div>
-            <div id="alert-modal-message" style="white-space:pre-line;color:var(--text2);padding:8px 0 4px;font-size:0.9rem"></div>
+            <div id="alert-modal-message" style="white-space:pre-line;color:var(--text2);padding:8px 0 4px;font-size:0.9rem;overflow-wrap:break-word;word-break:break-word"></div>
             <div class="modal-actions" style="justify-content:center">
                 <button class="btn" id="alert-modal-ok" style="min-width:120px">OK</button>
             </div>
