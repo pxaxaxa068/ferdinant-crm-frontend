@@ -1,5 +1,5 @@
 // ===================== AUTH GUARD — BACKEND VERSION =====================
-const API_BASE = 'https://web-production-1275f.up.railway.app/api';
+const API_BASE = 'ferdinant-crm-production.up.railway.app';
 
 // ===================== O'NG TUGMA VA DEVTOOLS TUGMALARINI CHEKLASH =====================
 // ESLATMA: bu faqat oddiy foydalanuvchini chalg'itadi, haqiqiy himoya emas —
