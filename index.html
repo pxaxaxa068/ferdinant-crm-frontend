@@ -5054,6 +5054,25 @@
 
         function renderCertificates() {
             document.getElementById("content").innerHTML = `
+        <div style="display:flex;justify-content:center;padding-top:2rem">
+            <div class="cert-form-container" style="max-width:420px;text-align:center;cursor:pointer" onclick="renderCertificateForm()">
+                <h1 style="font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#E0F2FE,#7AA9FF,#3B82F6);background-clip:text;-webkit-background-clip:text;color:transparent;margin-bottom:0.5rem">
+                    <i class="fas fa-certificate"></i> Sertifikat
+                </h1>
+                <div style="margin-bottom:1.5rem;color:#b9d0ff">
+                    Kursni tugatgan bo'lsangiz, shu yerdan sertifikatingizni oling
+                </div>
+                <button type="button" class="cert-submit-btn">
+                    <i class="fas fa-file-certificate"></i> Sertifikat olish
+                </button>
+            </div>
+        </div>
+    `;
+        }
+
+        function renderCertificateForm() {
+            document.getElementById("content").innerHTML = `
+        <div class="detail-back" onclick="renderCertificates()"><i class="fas fa-arrow-left"></i> Orqaga</div>
         <div style="display:flex;justify-content:center">
             <div class="cert-container" style="max-width:850px">
                 <div class="cert-form-container">
