@@ -2054,7 +2054,7 @@
     <div class="modal-backdrop" id="test-modal">
         <div class="modal-box" style="max-width:560px;max-height:88vh;overflow-y:auto">
             <div class="modal-title" id="testModalTitle"><i class="fas fa-flask"></i> Yangi test qo'shish</div>
-            <div class="form-group"><label>Test nomi *</label><input id="newTestName" placeholder="masalan: Kompyuter savodxonligi"></div>
+            <div class="form-group"><label>Test nomi *</label><input id="newTestName" placeholder="masalan: Kompyuter Savodxonligi"></div>
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
                 <div class="form-group"><label>Vaqt (soniya)</label><input id="newTestTime" type="number" min="1" value="30"></div>
                 <div class="form-group"><label>Maks. xato</label><input id="newTestMaxWrong" type="number" min="0" value="3"></div>
@@ -4412,7 +4412,7 @@
         }
 
         // Testlar ro'yxatini localStorage'dan yuklash. Agar hali hech narsa
-        // saqlanmagan bo'lsa, standart "Kompyuter savodxonligi" testi bilan boshlanadi.
+        // saqlanmagan bo'lsa, standart "Kompyuter Savodxonligi" testi bilan boshlanadi.
         function loadTests() {
             try {
                 const raw = localStorage.getItem(TESTS_STORAGE_KEY);
@@ -4425,7 +4425,7 @@
             }
             return [{
                 id: "default-1",
-                name: "Kompyuter savodxonligi",
+                name: "Kompyuter Savodxonligi",
                 settings: { timePerQuestion: 30, maxWrong: 3, passScore: 17 },
                 questions: DEFAULT_TEST_QUESTIONS
             }];
@@ -5054,7 +5054,7 @@
 
         function renderCertificates() {
             const certCourses = [
-                { name: "Kompyuter savodxonligi", icon: "fa-desktop" },
+                { name: "Kompyuter Savodxonligi", icon: "fa-desktop" },
                 { name: "Frontend", icon: "fa-code" },
                 { name: "Backend", icon: "fa-server" },
                 { name: "Kiber xavfsizlik", icon: "fa-shield-halved" }
